@@ -76,6 +76,12 @@ function buildBubbleCharts(sample){
         var result = resultArray[0];
         var xData = result.otu_ids;
         var yData = result.sample_values;
+        
+         // Enter a speed between 0 and 180
+         var level = 90;
+
+         // Trig to calc meter point
+         var degrees = 180 - level,
         var bubble_chart_data = [{
             x: xData.slice(0, 10),
             y: yData.slice(0, 10).reverse(),
